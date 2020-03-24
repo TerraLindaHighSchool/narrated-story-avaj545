@@ -36,23 +36,23 @@ public class Space extends World
              
              if(i < 70)
              {
-                //star = new Star(-1 - deltaSpeed, color1, getWidth(), getHeight());
-                //addObject(star, star.getX(), star.getY());
-                //stars[i] = star;
+                star = new Star(-1 - deltaSpeed, color1, getWidth(), getHeight());
+                addObject(star, star.getX(), star.getY());
+                stars[i] = star;
              }
              
              if(i >= 70 && i < 140)
              {
-                //star = new Star(-3 - deltaSpeed, color2, getWidth(), getHeight());
-                //addObject(star, star.getX(), star.getY());
-                //stars[i] = star;
+                star = new Star(-3 - deltaSpeed, color2, getWidth(), getHeight());
+                addObject(star, star.getX(), star.getY());
+                stars[i] = star;
              }
              
              if(i >= 140)
              {
-                //star = new Star(-5 - deltaSpeed, color3, getWidth(), getHeight());
-                //addObject(star, star.getX(), star.getY());
-                //stars[i] = star;
+                star = new Star(-5 - deltaSpeed, color3, getWidth(), getHeight());
+                addObject(star, star.getX(), star.getY());
+                stars[i] = star;
              }
          }
     }
