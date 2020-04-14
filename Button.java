@@ -15,6 +15,7 @@ public class Button extends Actor
     private static final Color transparent = new Color(0,0,0,0);
     private GreenfootImage background;
     private String prefix;
+    private GreenfootSound narration; 
     
     public Button()
     {
@@ -26,11 +27,24 @@ public class Button extends Actor
      */
     public Button(String prefix)
     {
-        background = getImage();  // get image from class
-        this.prefix = prefix;
-        updateImage();
+      background = getImage();  // get image from class
+      this.prefix = prefix;
+      updateImage();
+      narration = new GreenfootSound("audacity1.mp3"); 
     }
-
+    
+    public void act()
+    {
+       if(Greenfoot.mouseClicked(this))
+      {
+          System.out.println("Clicked");
+      }
+         if(Greenfoot.mouseClicked(this) && !narration.isPlaying())
+      {
+           narration.play();
+      }
+    }
+    
     /**
      * Update the image on screen to show the current value.
      */
